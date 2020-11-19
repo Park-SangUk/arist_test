@@ -1,0 +1,81 @@
+{% extends 'academy_base.html' %}
+
+{% load static %}
+
+{% block title %}수업소개 - ARIST{% endblock %}
+
+{% block extra-style %}
+<style>
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+
+    .nav_img {
+        background-image: url("{% static 'img/academy1.jpg' %}");
+        background-size: cover;
+    }
+
+    .academy_title {
+        color: white;
+    }
+
+    .introduce_img {
+        max-width: 100%;
+        height: auto !important;
+    }
+
+    .mathBook {
+        max-width: 80%;
+        height: auto !important;
+    }
+
+    .introduce_title {
+        font-size: 20pt;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<div id="carouselExampleControls" class="container carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="academy_class_box text-center">
+                <img class="introduce_img" src="{% static 'img/academy_class/math_introduce.png' %}"
+                    alt="math_introduce">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="container" style="margin-top: 50px;">
+
+    <div class="text-center">
+        <span><strong style="font-size: 20pt;">수학 교육과정</strong></span>
+    </div>
+
+    <br>
+    <br>
+
+    <table>
+        <tr class="introduce_box text-center">
+            <td><span class="introduce_title">미적분학</span></td>
+            <td><span class="introduce_title">선형대수</strong></span></td>
+            <td><span class="introduce_title">해석학</strong></span></td>
+        </tr>
+        <tr class="introduce_box text-center">
+            <td><img class="mathBook" src="{% static 'img/academy_class/book1.png' %}" alt="machineLearning_class"></td>
+            <td><img class="mathBook" src="{% static 'img/academy_class/book2.png' %}" alt="machineLearning_class"></td>
+            <td><img class="mathBook" src="{% static 'img/academy_class/book3.png' %}" alt="machineLearning_class"></td>
+        </tr>
+    </table>
+    <div class="introduce_box text-center">
+
+
+    </div>
+
+</div>
+{% endblock %}

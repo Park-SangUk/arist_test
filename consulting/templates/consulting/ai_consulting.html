@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}AI_Consulting{% endblock %}
+
+{% block extra-style %}
+<style>
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .nav_img {
+        background-image: url("{% static 'img/academy1.jpg' %}");
+        background-size: cover;
+    }
+
+    .title {
+        color: white;
+    }
+
+    .consulting_img_box > img {
+    width: 70%;
+    height: 70%;
+    border-bottom: 1px solid #011123;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="jumbotron text-center nav_img">
+    <h2 class="title"><strong>AI 컨설팅</strong></h2>
+</div>
+
+
+<div class="consulting_img_box text-center">
+    <img src="{% static 'img/ai_consulting/ai_consulting1.PNG' %}" alt="ai_consulting1">
+    <img src="{% static 'img/ai_consulting/ai_consulting2.PNG' %}" alt="ai_consulting2">
+    <img src="{% static 'img/ai_consulting/ai_consulting3.PNG' %}" alt="ai_consulting3">
+    <img src="{% static 'img/ai_consulting/ai_consulting4.PNG' %}" alt="ai_consulting4">
+</div>
+
+{% endblock %}

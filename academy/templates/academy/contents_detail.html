@@ -1,0 +1,38 @@
+{% extends 'academy_base.html' %}
+
+{% block title %}아카데미 상세 - ARIST{% endblock %}
+
+
+{% block content %}
+
+
+<div class="container">
+
+    <h2 class="mt-5" style="margin-bottom: 50px;">{{ object.title }}</h2>
+    <h4 style="margin-bottom: 30px;">{{ object.description }}</h3>
+        <table style="margin-bottom: 50px;">
+            <tr>
+                <td>일자</td>
+                <td>&nbsp;:&nbsp;</td>
+                <td>{{ object.start_dt|date:"Y-m-d" }} ~ {{ object.end_dt|date:"Y-m-d" }}</td>
+            </tr>
+            <tr>
+                <td>장소</td>
+                <td>&nbsp;:&nbsp;</td>
+                <td>{{ object.place }}</td>
+            </tr>
+            <tr>
+                <td>수강신청</td>
+                <td>&nbsp;:&nbsp;</td>
+                <td><a href="{{ object.url }}">수강신청 바로가기</a></td>
+            </tr>
+        </table>
+
+        {% for image in contents.images_set.all %}
+        <div class="text-center">
+            <img style="width: 60%; height: 60%;" src="{{ image.image.url }}">
+        </div>
+        {% endfor %}
+
+</div>
+{% endblock %}

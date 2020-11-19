@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}기업체출강 - ARIST{% endblock %}
+
+{% block extra-style %}
+<link rel="stylesheet" href="{% static 'css/lecture.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="jumbotron text-center nav_img">
+    <h2 class="title"><strong>기업체출강</strong></h2>
+</div>
+
+<!-- 기업체출강란 -->
+<div class="jumbotron lecture_odd">
+    <div class="text-center">
+        <span class="headline_title"><strong>기업체출강이란?</strong></span>
+    </div>
+
+    <div class="text-center lecture_contents">
+        <span class="contents_font">
+            업무와 바쁜 일정에 쫓기는 직장인, 연구자들을 위해 직접 학원에 방문하지 않고<br>
+            사내에서 강의를 하는 유형으로 인원, 장소, 비용, 학습 방향 등을 고려하여 기업 요청에 따라 <br>
+            수강생의 교육 목적을 강사가 파악후 집중 관리하여 요청 기간 내에 교육을 하는 유형의 교육
+        </span>
+    </div>
+</div>
+
+<!-- 출장교육의 장점 -->
+<div class="lecture_advantages jumbotron lecture_even">
+    <div class="row lecture_contents">
+        <div class="text-center col-md-6 headline_title"><strong>기업체출강의 장점</strong></div>
+        <div class="col-md-6">
+            <ol>
+                <li class="li_font">시간 선택가능</li>
+                <li class="li_font">장소 선택가능</li>
+                <li class="li_font">맞춤식 교육 <br>
+                    (고객사 요청에 맞는 효과적인 교육 프로그램 제공)</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<!-- 교육대상 -->
+<div class="jumbotron lecture_advantages lecture_odd">
+    <div class="row lecture_contents">
+        <div class="text-center col-md-6 headline_title"><strong>교육대상</strong></div>
+        <div class="col-md-6">
+            <ol>
+                <li class="li_font">학생</li>
+                <li class="li_font">연구원</li>
+                <li class="li_font">회사</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<!-- 기업체 출강 프로세스 -->
+<div class="jumbotron lecture_even text-center row">
+    <div class="text-center process_box headline_title1_box">
+        <span class="headline_title1"><strong>기업체출강 진행 프로세스</strong></span>
+    </div>
+
+    <div class="row text-center process_box">
+
+        <div class="text-center">
+            <div class="process_title">
+                <img class="lecture_icon" src="{% static 'img/apply.png' %}" alt="apply">
+                <h4 class="card-title">교육상담신청</h4>
+                <hr>
+                <p class="text-center process_contents">전화 및 이메일 <br>
+                    상담 신청해주시면 <br>
+                    담당자가 <br>
+                    검토 후 제안서 전달</p>
+            </div>
+        </div>
+
+        <div class="">
+            <img class="process_arrow" src="{% static 'img/next.png' %}" alt="">
+        </div>
+
+        <div class="text-center">
+            <div class="process_title">
+                <img class="lecture_icon" src="{% static 'img/meeting.png' %}" alt="meeting">
+                <h4 class="card-title text-center">기업미팅</h4>
+                <hr>
+                <p class="text-center process_contents">상세 기획을 위해 <br>
+                    교육담당자와 <br>
+                    고객사의 실무담당자가 <br>
+                    사전미팅 진행</p>
+            </div>
+        </div>
+
+        <div class="">
+            <img class="process_arrow" src="{% static 'img/next.png' %}" alt="">
+        </div>
+
+        <div class="text-center">
+            <div class="process_title">
+                <img class="lecture_icon" src="{% static 'img/suggestion.png' %}" alt="suggestion">
+                <h4 class="card-title text-center">커리큘럼 제안</h4>
+                <hr>
+                <p class="text-center process_contents">고객사의 <br>
+                    니즈를 반영한 <br>
+                    커리큘럼 제안</p>
+            </div>
+        </div>
+
+        <div class="">
+            <img class="process_arrow" src="{% static 'img/next.png' %}" alt="">
+        </div>
+
+        <div class="text-center">
+            <div class="process_title">
+                <img class="lecture_icon" src="{% static 'img/confirm.png' %}" alt="confirm">
+                <h4 class="card-title text-center">교육 확정</h4>
+                <hr>
+                <p class="text-center process_contents">고객사가 요청한 <br>
+                    시간, 장소에서 <br>
+                    강의 진행</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 강사 프로필 -->
+<!-- <div class="jumbotron lecture_odd">
+    <div class="text-center">
+        <span class="headline_title"><strong>강사 프로필</strong></span>
+    </div>
+
+    <div class="text-center lecture_contents">
+        <span class="lecture_contents"></span>
+    </div>
+</div> -->
+
+<!-- 문의 및 상담 -->
+<div class="jumbotron question_box">
+    <div class="text-center">
+        <img class="question_img" src="{% static 'img/question.jpg' %}" alt="question">
+    </div>
+</div>
+
+{% endblock %}

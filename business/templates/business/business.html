@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}비즈니스 - ARIST{% endblock %}
+
+{% block extra-style %}
+<link rel="stylesheet" href="{% static 'css/business.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="jumbotron text-center nav_img">
+    <h2 class="title"><strong>Business</strong></h2>
+</div>
+
+<div class="business_box text-center">
+    <div class="business_contents1">
+        <span class="contents_title">ARIST Academy</span>
+        <div class="contents_box row">
+            <div class="contents_img_box col-md-6">
+                <img class="contents_img" src="{% static 'img/business/business_applicable.png' %}" alt="business_applicable">
+                <p class="text-center">
+                    직장인 대학생 연구원들을 위한 <br>
+                    개발 연구에 실제 필요한 <br>
+                    응용가능한 수학 교육
+                </p>
+            </div>
+            <div class="contents_img_box col-md-6">
+                <img class="contents_img" src="{% static 'img/business/business_ai.png' %}" alt="business_ai">
+                <p class="text-center">
+                    개발자 연구원들을 위한 <br>
+                    인공지능 개발연구를 위한 <br>
+                    이론 원리 파악 및 구현 교육
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="business_img_box text-center">
+    <img src="{% static 'img/business/business3.PNG' %}" alt="business_contents3">
+    <img src="{% static 'img/business/business4.PNG' %}" alt="business_contents4">
+    <img src="{% static 'img/business/business5.PNG' %}" alt="business_contents5">
+    <img src="{% static 'img/business/business6.PNG' %}" alt="business_contents6">
+    <img src="{% static 'img/business/business7.PNG' %}" alt="business_contents7">
+    <img src="{% static 'img/business/business9.PNG' %}" alt="business_contents9">
+    <img src="{% static 'img/business/business10.PNG' %}" alt="business_contents10">
+</div>
+
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}딥러닝 첫걸음 : Computer Vision - ARIST{% endblock %}
+
+{% block extra-style %}
+<style>
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .nav_img {
+        background-image: url("{% static 'img/academy1.jpg' %}");
+        background-size: cover;
+    }
+
+    .title {
+        color: white;
+    }
+
+    img {
+        width: 70%;
+        height: 70%;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="jumbotron text-center nav_img">
+    <h2 class="title"><strong>딥러닝 첫걸음 : Computer Vision</strong></h2>
+</div>
+
+
+<div class="text-center">
+    <img src="{% static 'img/deepLearning_class_img/computer_vision/computer_vision2.png' %}" alt="computer_vision2">
+    <img src="{% static 'img/deepLearning_class_img/computer_vision/computer_vision3.PNG' %}" alt="computer_vision3">
+    <img src="{% static 'img/deepLearning_class_img/computer_vision/computer_vision4.PNG' %}" alt="computer_vision4">
+    <img src="{% static 'img/deepLearning_class_img/computer_vision/computer_vision5.PNG' %}" alt="computer_vision5">
+    <img src="{% static 'img/deepLearning_class_img/computer_vision/computer_vision6.PNG' %}" alt="computer_vision6">
+    <img src="{% static 'img/deepLearning_class_img/computer_vision/computer_vision7.PNG' %}" alt="computer_vision7">
+    <img src="{% static 'img/deepLearning_class_img/computer_vision/computer_vision8.PNG' %}" alt="computer_vision8">
+    <img src="{% static 'img/deepLearning_class_img/computer_vision/computer_vision9.PNG' %}" alt="computer_vision9">
+    <img src="{% static 'img/deepLearning_class_img/computer_vision/computer_vision10.PNG' %}" alt="computer_vision10">
+    <img src="{% static 'img/deepLearning_class_img/computer_vision/computer_vision11.PNG' %}" alt="computer_vision11">
+    <img src="{% static 'img/deepLearning_class_img/computer_vision/computer_vision12.PNG' %}" alt="computer_vision12">
+    <img src="{% static 'img/deepLearning_class_img/computer_vision/computer_vision13.PNG' %}" alt="computer_vision13">
+    <img src="{% static 'img/deepLearning_class_img/computer_vision/computer_vision14.PNG' %}" alt="computer_vision14">
+    <img src="{% static 'img/deepLearning_class_img/computer_vision/computer_vision15.PNG' %}" alt="computer_vision15">
+    <img src="{% static 'img/deepLearning_class_img/computer_vision/computer_vision16.PNG' %}" alt="computer_vision16">
+    <img src="{% static 'img/deepLearning_class_img/computer_vision/computer_vision17.PNG' %}" alt="computer_vision17">
+    <img src="{% static 'img/deepLearning_class_img/computer_vision/computer_vision18.PNG' %}" alt="computer_vision18">
+</div>
+
+{% endblock %}

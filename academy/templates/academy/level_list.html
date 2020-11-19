@@ -1,0 +1,55 @@
+{% extends 'academy_base.html' %}
+
+{% block title %}아카데미 - ARIST{% endblock %}
+
+{% block content %}
+
+
+
+<div class="container">
+
+    {% for item in object_list %}
+    <div class="mt-5">
+        <span class="h2">{{ item.name }}</span>&emsp;
+        <span class="font-italic h5">{{ item.description }}</span>
+    </div>
+
+    <hr style="margin: 0 0 20px 0;">
+    <div class="row">
+        {% for contents in item.contents_set.all|slice:":4" %}
+        <div class="ml-5">
+            <div class="thumbnail">
+                <a href="{{ contents.get_absolute_url }}">
+                    {% for image in contents.images_set.all|slice:":1" %}
+                    <img src="{{ image.image.url }}" style="width: 230px; height: 300px;">
+                    {% endfor %}
+                </a>
+            </div>
+            <table>
+                <tr>
+                    <td class="font-italic">수업</td>
+                    <td>&nbsp;:&nbsp;</td>
+                    <td class="font-italic">{{ contents.title }}
+                    </td>
+                </tr>
+                <tr>
+                    <td class="font-italic">수업기간</td>
+                    <td>&nbsp;:&nbsp;</td>
+                    <td class="font-italic">{{ contents.start_dt|date:"Y-m-d" }} ~ {{ contents.end_dt|date:"Y-m-d" }}
+                    </td>
+                </tr>
+                <tr>
+                    <td class="font-italic">수업시간</td>
+                    <td>&nbsp;:&nbsp;</td>
+                    <td class="font-italic">{{ contents.start_dt|time }} ~ {{ contents.end_dt|time }}
+                    </td>
+                </tr>
+            </table>
+        </div>
+        {% endfor %}
+    </div>
+
+    {% endfor %}
+
+</div>
+{% endblock %}

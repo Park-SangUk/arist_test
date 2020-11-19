@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}딥러닝 첫걸음 - ARIST{% endblock %}
+
+{% block extra-style %}
+<style>
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .nav_img {
+        background-image: url("{% static 'img/academy1.jpg' %}");
+        background-size: cover;
+    }
+
+    .title {
+        color: white;
+    }
+
+    img {
+        width: 70%;
+        height: 70%;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="jumbotron text-center nav_img">
+    <h2 class="title"><strong>딥러닝 첫걸음</strong></h2>
+</div>
+
+
+<div class="text-center">
+    <img src="{% static 'img/deepLearning_class_img/introduce_beginner/introduce_beginner2.JPG' %}" alt="introduce_beginner2">
+    <img src="{% static 'img/deepLearning_class_img/introduce_beginner/introduce_beginner3.JPG' %}" alt="introduce_beginner3">
+    <img src="{% static 'img/deepLearning_class_img/introduce_beginner/introduce_beginner4.JPG' %}" alt="introduce_beginner4">
+    <img src="{% static 'img/deepLearning_class_img/introduce_beginner/introduce_beginner5.JPG' %}" alt="introduce_beginner5">
+    <img src="{% static 'img/deepLearning_class_img/introduce_beginner/introduce_beginner6.JPG' %}" alt="introduce_beginner6">
+    <img src="{% static 'img/deepLearning_class_img/introduce_beginner/introduce_beginner7.JPG' %}" alt="introduce_beginner7">
+    <img src="{% static 'img/deepLearning_class_img/introduce_beginner/introduce_beginner8.JPG' %}" alt="introduce_beginner8">
+    <img src="{% static 'img/deepLearning_class_img/introduce_beginner/introduce_beginner9.JPG' %}" alt="introduce_beginner9">
+    <img src="{% static 'img/deepLearning_class_img/introduce_beginner/introduce_beginner10.JPG' %}" alt="introduce_beginner10">
+    <img src="{% static 'img/deepLearning_class_img/introduce_beginner/introduce_beginner11.JPG' %}" alt="introduce_beginner11">
+    <img src="{% static 'img/deepLearning_class_img/introduce_beginner/introduce_beginner12.JPG' %}" alt="introduce_beginner12">
+    <img src="{% static 'img/deepLearning_class_img/introduce_beginner/introduce_beginner13.JPG' %}" alt="introduce_beginner13">
+    <img src="{% static 'img/deepLearning_class_img/introduce_beginner/introduce_beginner14.JPG' %}" alt="introduce_beginner14">
+    <img src="{% static 'img/deepLearning_class_img/introduce_beginner/introduce_beginner15.JPG' %}" alt="introduce_beginner15">
+</div>
+
+{% endblock %}

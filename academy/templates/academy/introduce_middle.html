@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}딥러닝 따라잡기 - ARIST{% endblock %}
+
+{% block extra-style %}
+<style>
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .nav_img {
+        background-image: url("{% static 'img/academy1.jpg' %}");
+        background-size: cover;
+    }
+
+    .title {
+        color: white;
+    }
+
+    img {
+        width: 70%;
+        height: 70%;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="jumbotron text-center nav_img">
+    <h2 class="title"><strong>딥러닝 따라잡기</strong></h2>
+</div>
+
+
+<div class="text-center">
+    <img src="{% static 'img/deepLearning_class_img/introduce_middle/introduce_middle2.JPG' %}" alt="introduce_middle2">
+    <img src="{% static 'img/deepLearning_class_img/introduce_middle/introduce_middle3.JPG' %}" alt="introduce_middle3">
+    <img src="{% static 'img/deepLearning_class_img/introduce_middle/introduce_middle4.JPG' %}" alt="introduce_middle4">
+    <img src="{% static 'img/deepLearning_class_img/introduce_middle/introduce_middle5.JPG' %}" alt="introduce_middle5">
+    <img src="{% static 'img/deepLearning_class_img/introduce_middle/introduce_middle6.JPG' %}" alt="introduce_middle6">
+    <img src="{% static 'img/deepLearning_class_img/introduce_middle/introduce_middle7.JPG' %}" alt="introduce_middle7">
+    <img src="{% static 'img/deepLearning_class_img/introduce_middle/introduce_middle8.JPG' %}" alt="introduce_middle8">
+    <img src="{% static 'img/deepLearning_class_img/introduce_middle/introduce_middle9.JPG' %}" alt="introduce_middle9">
+    <img src="{% static 'img/deepLearning_class_img/introduce_middle/introduce_middle10.JPG' %}" alt="introduce_middle10">
+    <img src="{% static 'img/deepLearning_class_img/introduce_middle/introduce_middle11.JPG' %}" alt="introduce_middle11">
+    <img src="{% static 'img/deepLearning_class_img/introduce_middle/introduce_middle12.JPG' %}" alt="introduce_middle12">
+    <img src="{% static 'img/deepLearning_class_img/introduce_middle/introduce_middle13.JPG' %}" alt="introduce_middle13">
+    <img src="{% static 'img/deepLearning_class_img/introduce_middle/introduce_middle14.JPG' %}" alt="introduce_middle14">
+    <img src="{% static 'img/deepLearning_class_img/introduce_middle/introduce_middle15.JPG' %}" alt="introduce_middle15">
+    <img src="{% static 'img/deepLearning_class_img/introduce_middle/introduce_middle16.JPG' %}" alt="introduce_middle16">
+    <img src="{% static 'img/deepLearning_class_img/introduce_middle/introduce_middle17.JPG' %}" alt="introduce_middle17">
+    <img src="{% static 'img/deepLearning_class_img/introduce_middle/introduce_middle18.JPG' %}" alt="introduce_middle18">
+</div>
+
+{% endblock %}

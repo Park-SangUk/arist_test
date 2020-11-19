@@ -1,0 +1,155 @@
+{% extends 'academy_base.html' %}
+
+{% load static %}
+
+{% block title %}수업소개 - ARIST{% endblock %}
+
+{% block extra-style %}
+<style>
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+
+    .nav_img {
+        background-image: url("{% static 'img/academy1.jpg' %}");
+        background-size: cover;
+    }
+
+    .academy_title {
+        color: white;
+    }
+
+    .introduce_box {
+        float: left;
+        width: 50%;
+    }
+
+    .introduce_img {
+        max-width: 90%;
+        height: auto !important;
+    }
+
+    .introduce_img:hover {
+        -ms-transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    .introduce_background {
+        width: 550px;
+        height: 366px;
+        background-color: white;
+    }
+
+    .introduce_title {
+        font-size: 13pt;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<div id="carouselExampleControls" class="container carousel slide" data-ride="carousel">
+
+    <div class="text-center">
+        <span><strong style="font-size: 20pt;">딥러닝 교육과정</strong></span>
+    </div>
+
+    <br>
+    <br>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="introduce_box text-center">
+                <span><strong class="introduce_title">딥러닝 첫걸음 : </strong>NLP</span>
+                <hr>
+                <a href="{% url 'academy:nlp' %}">
+                    <img class="introduce_img" src="{% static 'img/deepLearning_class_img/NLP_class/NLP_thumbnail.png' %}"
+                        alt="NLP_class">
+                </a>
+            </div>
+            <div class="introduce_box text-center">
+                <span><strong class="introduce_title">딥러닝 첫걸음 : </strong>Computer Vision</span>
+                <hr>
+                <a href="{% url 'academy:computerVision' %}">
+                    <img class="introduce_img" src="{% static 'img/deepLearning_class_img/computer_vision/computer_vision1.png' %}"
+                        alt="computerVision_class">
+                </a>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="introduce_box text-center">
+                <span><strong class="introduce_title">딥러닝 첫걸음</strong>(입문반)</span>
+                <hr>
+                <a href="{% url 'academy:beginner' %}">
+                    <img class="introduce_img" src="{% static 'img/deepLearning_class_img/introduce_beginner/introduce_beginner1.png' %}"
+                        alt="beginner_class">
+                </a>
+            </div>
+            <div class="introduce_box text-center">
+                <span><strong class="introduce_title">딥러닝 따라잡기</strong>(중급반)</span>
+                <hr>
+                <a href="{% url 'academy:middle' %}">
+                    <img class="introduce_img" src="{% static 'img/deepLearning_class_img/introduce_middle/introduce_middle1.png' %}"
+                        alt="middle_class">
+                </a>
+            </div>
+        </div>
+
+        <!-- 페이지 샘플 -->
+        <!-- <div class="carousel-item">
+            <div class="introduce_box text-center">
+                <span><strong class="introduce_title">&nbsp;</strong></span>
+                <hr>
+                <p class="introduce_img"></p>
+            </div>
+            <div class="introduce_box text-center">
+                <span><strong class="introduce_title">&nbsp;</strong></span>
+                <hr>
+                <p class="introduce_img"></p>
+            </div>
+        </div> -->
+
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+
+    </div>
+
+</div>
+
+<hr>
+
+
+<div class="container" style="margin-top: 50px;">
+
+    <div class="text-center">
+        <span><strong style="font-size: 20pt;">머신러닝 교육과정</strong></span>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="introduce_box text-center">
+        <span><strong class="introduce_title">머신러닝 첫걸음</strong>(입문반)</span>
+        <hr>
+        <a href="{% url 'academy:machineLearning' %}">
+            <img class="introduce_img" src="{% static 'img/machineLearning_class_img/machineLearning.png' %}"
+                alt="machineLearning_class">
+        </a>
+    </div>
+    <div class="text-center">
+        <span><strong class="introduce_title">&nbsp;</strong></span>
+        <hr>
+        <p class="introduce_background"></p>
+    </div>
+
+</div>
+{% endblock %}

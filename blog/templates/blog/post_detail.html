@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Blog - ARIST{% endblock %}
+
+
+{% block content %}
+<div class="jumbotron text-center nav_img">
+    <h2 class="title"><strong>Blog Detail</strong></h2>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8">
+            <h1 class="mt-4">{{ object.title }}</h1>
+            <hr>
+            <p>{{ object.modify_dt }}</p>
+            <hr>
+            <br>
+            <p>{{ object.contents | safe }}</p>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div>
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.media }}
+                {{ form.as_p }}
+                <button class="btn btn-primary" type="submit">댓글달기</button>
+            </form>
+        </div>
+
+        {% for comment in comments %}
+        <div class="media mb-4">
+            <div class="media-body">
+                <h5 class="mt-0">{{ comment.writer }}</h5>
+                <h5 class="mt-0">{{ comment.modify_dt|date:"N d, Y" }}</h5>
+                <h5 class="mt-0">{{ comment.comment | safe }}</h5>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% endblock %}

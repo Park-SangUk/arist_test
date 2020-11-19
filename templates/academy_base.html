@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}ARIST{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'bootstrap-4.4.1-dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% block extra-style %}{% endblock %}
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+        <a class="arist_logo_box" href="{% url 'home' %}">
+            <img class="arist_logo" src="{% static 'img/ARIST_logo.png' %}" alt="arist_logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item mx-1 btn">
+                    <a class="nav-link" href="{% url 'home' %}">Home</a>
+                </li>
+                <li class="nav-item mx-1 btn">
+                    <a class="nav-link" href="{% url 'business:index' %}">Business</a>
+                </li>
+                <li class="nav-item dropdown mx-1 btn">
+                    <a class="nav-link dropdown-toggle" href="{% url 'academy:index' %}" id="navbarDropdown"
+                        role="button" aria-haspopup="true" aria-expanded="false">
+                        Academy
+                    </a>
+                    <div class="dropdown-menu text-center" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{% url 'academy:introduce' %}">인공지능</a>
+                        <a class="dropdown-item" href="{% url 'academy:math' %}">수학</a>
+                    </div>
+                </li>
+                <li class="nav-item mx-1 btn">
+                    <a class="nav-link" href="{% url 'consulting:index' %}">AI컨설팅</a>
+                </li>
+                <li class="nav-item mx-1 btn">
+                    <a class="nav-link" href="{% url 'lecture:index' %}">기업체출강</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="jumbotron text-center nav_img">
+        <h2 class="academy_title"><strong>Academy</strong></h2>
+    </div>
+
+    {% block content %}{% endblock %}
+
+    {% block footer %}
+    <footer style="margin-top: 50px; color: darkgray;">
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg bt">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item mx-1 btn"><a class="nav-link text-black" href="{% url 'home' %}">ARIST</a></li>
+                <li class="nav-item mx-1 btn"><a class="nav-link text-black"
+                        href="{% url 'business:index' %}">Business</a></li>
+                <li class="nav-item mx-1 btn"><a class="nav-link text-black"
+                        href="{% url 'academy:index' %}">Academy</a></li>
+                <li class="nav-item mx-1 btn"><a class="nav-link text-black" href="{% url 'consulting:index' %}">AI컨설팅</a>
+                </li>
+                <li class="nav-item mx-1 btn"><a class="nav-link text-black" href="{% url 'lecture:index' %}">기업체출강</a>
+                </li>
+            </ul>
+        </nav>
+
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg bt">
+            <ul class="nav flex-column" style="font-size: 11px;">
+                <li>주소 : 대전광역시 서구 월평북로 85, 401호</li>
+                <li>전화번호 : 042-721-1023</li>
+                <li>팩스번호 : 042-471-8903</li>
+                <li>이메일 : contact@arist.io</li>
+            </ul>
+        </nav>
+    </footer>
+    {% endblock %}
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="{% static 'bootstrap-4.4.1-dist/js/bootstrap.min.js' %}"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155052021-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-155052021-1');
+    </script>
+
+    {% block extra-script %}{% endblock %}
+</body>
+
+</html>

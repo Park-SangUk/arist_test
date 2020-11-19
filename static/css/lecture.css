@@ -1,0 +1,103 @@
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.nav_img {
+    background-image: url("/static/img/academy1.jpg");
+    background-size: cover;
+}
+
+.lecture_odd {
+    background-image: url("/static/img/vision_image.jpg");
+    background-size: contain;
+}
+
+.lecture_even {
+    margin-top: 50px;
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    color: white;
+}
+
+.headline_title {
+    font-size: 3vw;
+    text-decoration: solid underline #F78181;
+}
+
+.headline_title1 {
+    font-size: 2.3vw;
+    text-decoration: solid underline #F78181;
+}
+
+.headline_title1_box {
+    width: 100%;
+    max-height: 100px;
+}
+
+.lecture_contents {
+    margin-top: 40px;
+}
+
+.contents_font {
+    font-size: 1.4vw;
+}
+
+.card-img-top {
+    width: 80px;
+    height: 80px;
+    margin-top: 30px;
+}
+
+.li_font {
+    font-size: 1.4vw;
+    margin-left: 10px;
+}
+
+.process_box {
+    float: none;
+    margin: 10px auto;
+}
+
+.process_contents {
+    font-size: 1vw;
+}
+
+.process_title {
+    text-align: center;
+}
+
+.process_arrow {
+    width: 50px;
+    height: 50px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.card-title {
+    font-size: 1.2vw;
+}
+
+.lecture_icon {
+    width: 130px;
+    height: 130px;
+    margin-bottom: 20px;
+}
+
+.question_box {
+    margin-top: 50px;
+    width: 100%;
+}
+
+.question_title {
+    font-size: 3vw;
+    text-decoration: solid underline #F78181;
+}
+
+.question_img {
+    width: 45%;
+    min-width: 400px;
+}

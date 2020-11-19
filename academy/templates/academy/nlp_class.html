@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}딥러닝 첫걸음 - ARIST{% endblock %}
+
+{% block extra-style %}
+<style>
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .nav_img {
+        background-image: url("{% static 'img/academy1.jpg' %}");
+        background-size: cover;
+    }
+
+    .title {
+        color: white;
+    }
+
+    img {
+        width: 70%;
+        height: 70%;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="jumbotron text-center nav_img">
+    <h2 class="title"><strong>딥러닝 첫걸음</strong></h2>
+</div>
+
+
+<div class="text-center">
+    <img src="{% static 'img/deepLearning_class_img/NLP_class/NLP_class.png' %}" alt="NLP_class">
+    <img src="{% static 'img/deepLearning_class_img/NLP_class/NLP_class1.PNG' %}" alt="NLP_class1">
+    <img src="{% static 'img/deepLearning_class_img/NLP_class/NLP_class2.PNG' %}" alt="NLP_class2">
+    <img src="{% static 'img/deepLearning_class_img/NLP_class/NLP_class3.PNG' %}" alt="NLP_class3">
+    <img src="{% static 'img/deepLearning_class_img/NLP_class/NLP_class4.PNG' %}" alt="NLP_class4">
+    <img src="{% static 'img/deepLearning_class_img/NLP_class/NLP_class5.PNG' %}" alt="NLP_class5">
+    <img src="{% static 'img/deepLearning_class_img/NLP_class/NLP_class6.PNG' %}" alt="NLP_class6">
+    <img src="{% static 'img/deepLearning_class_img/NLP_class/NLP_class7.PNG' %}" alt="NLP_class7">
+    <img src="{% static 'img/deepLearning_class_img/NLP_class/NLP_class8.PNG' %}" alt="NLP_class8">
+    <img src="{% static 'img/deepLearning_class_img/NLP_class/NLP_class9.PNG' %}" alt="NLP_class9">
+    <img src="{% static 'img/deepLearning_class_img/NLP_class/NLP_class10.PNG' %}" alt="NLP_class10">
+    <img src="{% static 'img/deepLearning_class_img/NLP_class/NLP_class11.PNG' %}" alt="NLP_class11">
+    <img src="{% static 'img/deepLearning_class_img/NLP_class/NLP_class12.PNG' %}" alt="NLP_class12">
+    <img src="{% static 'img/deepLearning_class_img/NLP_class/NLP_class13.PNG' %}" alt="NLP_class13">
+    <img src="{% static 'img/deepLearning_class_img/NLP_class/NLP_class14.PNG' %}" alt="NLP_class14">
+</div>
+
+{% endblock %}

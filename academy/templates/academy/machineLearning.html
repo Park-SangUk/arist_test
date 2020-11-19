@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}머신러닝 첫걸음 - ARIST{% endblock %}
+
+{% block extra-style %}
+<style>
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .nav_img {
+        background-image: url("{% static 'img/academy1.jpg' %}");
+        background-size: cover;
+    }
+
+    .title {
+        color: white;
+    }
+
+    img {
+        width: 70%;
+        height: 70%;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="jumbotron text-center nav_img">
+    <h2 class="title"><strong>머신러닝 첫걸음</strong></h2>
+</div>
+
+
+<div class="text-center">
+    <img src="{% static 'img/machineLearning_class_img/machineLearning_calss.png' %}" alt="machineLearning_calss">
+    <img src="{% static 'img/machineLearning_class_img/machineLearning1.PNG' %}" alt="machineLearning1">
+    <img src="{% static 'img/machineLearning_class_img/machineLearning2.PNG' %}" alt="machineLearning2">
+    <img src="{% static 'img/machineLearning_class_img/machineLearning3.PNG' %}" alt="machineLearning3">
+    <img src="{% static 'img/machineLearning_class_img/machineLearning4.PNG' %}" alt="machineLearning4">
+    <img src="{% static 'img/machineLearning_class_img/machineLearning5.PNG' %}" alt="machineLearning5">
+    <img src="{% static 'img/machineLearning_class_img/machineLearning6.PNG' %}" alt="machineLearning6">
+    <img src="{% static 'img/machineLearning_class_img/machineLearning7.PNG' %}" alt="machineLearning7">
+    <img src="{% static 'img/machineLearning_class_img/machineLearning8.PNG' %}" alt="machineLearning8">
+    <img src="{% static 'img/machineLearning_class_img/machineLearning9.PNG' %}" alt="machineLearning9">
+    <img src="{% static 'img/machineLearning_class_img/machineLearning10.PNG' %}" alt="machineLearning10">
+    <img src="{% static 'img/machineLearning_class_img/machineLearning11.PNG' %}" alt="machineLearning11">
+    <img src="{% static 'img/machineLearning_class_img/machineLearning12.PNG' %}" alt="machineLearning12">
+    <img src="{% static 'img/machineLearning_class_img/machineLearning13.PNG' %}" alt="machineLearning13">
+    <img src="{% static 'img/machineLearning_class_img/machineLearning14.PNG' %}" alt="machineLearning14">
+</div>
+
+{% endblock %}

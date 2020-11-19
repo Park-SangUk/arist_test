@@ -1,0 +1,71 @@
+{% extends 'academy_base.html' %}
+
+{% load static %}
+
+{% block title %}수업소개 - ARIST{% endblock %}
+
+{% block extra-style %}
+<style>
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+
+    .nav_img {
+        background-image: url("{% static 'img/academy1.jpg' %}");
+        background-size: cover;
+    }
+
+    .academy_title {
+        color: white;
+    }
+
+
+    .academy_class_box {
+        float: left;
+        width: 50%;
+    }
+
+    .introduce_img {
+        max-width: 50%;
+        height: auto !important;
+    }
+
+    .introduce_img:hover {
+        -ms-transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    .introduce_title {
+        font-size: 30pt;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<div id="carouselExampleControls" class="container carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="academy_class_box text-center">
+                <span><strong class="introduce_title">인공지능</strong></span>
+                <hr>
+                <a href="{% url 'academy:introduce' %}">
+                    <img class="introduce_img" src="{% static 'img/academy_class/AI_class.png' %}" alt="AI_class">
+                </a>
+            </div>
+            <div class="academy_class_box text-center">
+                <span><strong class="introduce_title">수학</strong></span>
+                <hr>
+                <a href="{% url 'academy:math' %}">
+                    <img class="introduce_img" src="{% static 'img/academy_class/math_class.png' %}"
+                        alt="beginner_class">
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
